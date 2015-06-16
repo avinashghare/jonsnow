@@ -9,14 +9,13 @@ class Json extends CI_Controller
         $elements[0]->sort="1";
         $elements[0]->header="ID";
         $elements[0]->alias="id";
-
-        $elements=array();
+        
         $elements[1]=new stdClass();
         $elements[1]->field="`jonsnow_interest`.`name`";
         $elements[1]->sort="1";
         $elements[1]->header="Name";
         $elements[1]->alias="name";
-
+        
         $search=$this->input->get_post("search");
         $pageno=$this->input->get_post("pageno");
         $orderby=$this->input->get_post("orderby");
@@ -24,7 +23,7 @@ class Json extends CI_Controller
         $maxrow=$this->input->get_post("maxrow");
         if($maxrow=="")
         {
-            $maxrow=10;
+            $maxrow=20;
         }
         if($orderby=="")
         {
@@ -82,26 +81,25 @@ class Json extends CI_Controller
         $elements[0]->sort="1";
         $elements[0]->header="ID";
         $elements[0]->alias="id";
-
-        $elements=array();
+        
         $elements[1]=new stdClass();
         $elements[1]->field="`jonsnow_feed`.`title`";
         $elements[1]->sort="1";
         $elements[1]->header="Title";
         $elements[1]->alias="title";
-
-        $elements=array();
+        
         $elements[2]=new stdClass();
         $elements[2]->field="`jonsnow_feed`.`description`";
         $elements[2]->sort="1";
         $elements[2]->header="Description";
         $elements[2]->alias="description";
-
+        
         $search=$this->input->get_post("search");
         $pageno=$this->input->get_post("pageno");
         $orderby=$this->input->get_post("orderby");
         $orderorder=$this->input->get_post("orderorder");
         $maxrow=$this->input->get_post("maxrow");
+        
         if($maxrow=="")
         {
             $maxrow=20;
